@@ -617,12 +617,19 @@ namespace RoslynPad.UI
         public NuGetDocumentViewModel NuGet { get; }
         public string Title => Document != null && !Document.IsAutoSaveOnly ? Document.Name : DefaultDocumentName + GetFileExtension();
         public IDelegateCommand OpenBuildPathCommand { get; }
+        public string SaveGesture => KeybindHelper.GetSequenceStr(KeybindHelper.KEY_BIND.SaveDocument);
         public IDelegateCommand SaveCommand { get; }
+        public string RunGesture => KeybindHelper.GetSequenceStr(KeybindHelper.KEY_BIND.RunScript);
         public IDelegateCommand RunCommand { get; }
+        public string TerminateGesture => KeybindHelper.GetSequenceStr(KeybindHelper.KEY_BIND.TerminateRunningScript);
         public IDelegateCommand TerminateCommand { get; }
+        public string FormatDocumentGesture => KeybindHelper.GetSequenceStr(KeybindHelper.KEY_BIND.FormatDocument);
         public IDelegateCommand FormatDocumentCommand { get; }
+        public string CommentSelectionGesture => KeybindHelper.GetSequenceStr(KeybindHelper.KEY_BIND.CommentSelection);
         public IDelegateCommand CommentSelectionCommand { get; }
+        public string UncommentSelectionGesture => KeybindHelper.GetSequenceStr(KeybindHelper.KEY_BIND.UncommentSelection);
         public IDelegateCommand UncommentSelectionCommand { get; }
+        public string RenameSymbolGesture => KeybindHelper.GetSequenceStr(KeybindHelper.KEY_BIND.RenameSymbol);
         public IDelegateCommand RenameSymbolCommand { get; }
 
         public bool IsRunning
